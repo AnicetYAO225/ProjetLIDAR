@@ -4,46 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analyses Géospatiales et LIDAR</title>
+    <title>WebSIG Portfolio - Analyses Géospatiales et LIDAR</title>
 
-    <!-- ========================================
-         FEUILLES DE STYLES EXTERNES
-         ======================================== -->
-    
-    <!-- Bootstrap 5 : Framework CSS pour le design responsive et les composants -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome : Bibliothèque d'icônes vectorielles -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <!-- Feuilles de styles personnalisées -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <!-- ========================================
-         STYLES CSS PERSONNALISÉS
-         ======================================== -->
     <style>
-        /* Style du titre principal dans la section hero */
         .hero-section h1 {
-            letter-spacing: 1px; /* Espacement entre les lettres pour un effet élégant */
+            letter-spacing: 1px;
         }
 
-        /* Carte de fonctionnalité avec effet de survol */
         .feature-card {
             background: white;
-            border-radius: 15px; /* Coins arrondis */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Ombre portée légère */
-            transition: all 0.3s ease; /* Animation fluide au survol */
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
         }
 
-        /* Effet au survol de la souris sur les cartes */
         .feature-card:hover {
-            transform: translateY(-8px); /* Déplacement vers le haut */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        /* Taille de police du pied de page */
         footer {
             font-size: 0.9rem;
         }
@@ -52,55 +41,40 @@
 
 <body>
 
-    <!-- ========================================
-         BARRE DE NAVIGATION PRINCIPALE
-         Navbar fixe en haut de la page avec menu responsive
-         ======================================== -->
+    <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
         <div class="container">
-            <!-- Logo / Marque du site -->
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-globe-americas me-2"></i>
                 territoires
             </a>
 
-            <!-- Bouton hamburger pour mobile (collapse) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu de navigation (collapsible sur mobile) -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- Lien Accueil (page actuelle) -->
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">
                             <i class="fas fa-home"></i> Accueil
                         </a>
                     </li>
-                    
-                    <!-- Lien vers la carte 2D interactive -->
                     <li class="nav-item">
                         <a class="nav-link" href="map.html">
                             <i class="fas fa-map"></i> Carte 2D
                         </a>
                     </li>
-                    
-                    <!-- Lien vers le visualisateur 3D LIDAR -->
                     <li class="nav-item">
                         <a class="nav-link" href="3d-viewer.html">
                             <i class="fas fa-cube"></i> Visualisation 3D
                         </a>
                     </li>
-                    
-                    <!-- Lien vers la page d'analyses spatiales -->
                     <li class="nav-item">
                         <a class="nav-link" href="analysis.html">
                             <i class="fas fa-chart-line"></i> Analyses
                         </a>
                     </li>
-                    
-                    <!-- Lien vers le tableau de bord -->
                     <li class="nav-item">
                         <a class="nav-link" href="dashboard.html">
                             <i class="fas fa-tachometer-alt"></i> Dashboard
@@ -111,38 +85,29 @@
         </div>
     </nav>
 
-    <!-- ========================================
-         SECTION HERO (BANNIÈRE D'ACCUEIL)
-         Grande section avec image de fond et call-to-action
-         ======================================== -->
+    <!-- Hero Section avec image -->
     <section class="hero-section text-white text-center d-flex align-items-center" style="
         min-height: 75vh;
-        /* Dégradé sombre superposé à l'image pour améliorer la lisibilité du texte */
         background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
         url('images/img.jpg') center/cover no-repeat;
     ">
 
         <div class="container">
-            <!-- Titre principal du site -->
             <h1 class="display-4 fw-bold mb-3">
                 Plateforme WebSIG d'analyse territoriale
             </h1>
 
-            <!-- Description courte -->
             <p class="lead mb-4">
                 Visualisation cartographique, analyses spatiales et données 3D
                 pour l'exploration des territoires.
             </p>
 
-            <!-- Boutons d'action (Call to Action) -->
             <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-                <!-- Bouton principal : Ouvrir la carte -->
                 <a href="map.html" class="btn btn-light btn-lg px-4">
                     <i class="fas fa-map me-2"></i>
                     Ouvrir la carte
                 </a>
 
-                <!-- Bouton secondaire : Voir les analyses -->
                 <a href="dashboard.html" class="btn btn-outline-light btn-lg px-4">
                     <i class="fas fa-chart-line me-2"></i>
                     Voir les analyses
@@ -151,14 +116,10 @@
         </div>
     </section>
 
-    <!-- ========================================
-         SECTION FONCTIONNALITÉS
-         Présentation des 4 grandes fonctionnalités du WebSIG
-         ======================================== -->
+    <!-- FONCTIONNALITÉS -->
     <section class="py-5 bg-light">
         <div class="container">
 
-            <!-- En-tête de la section -->
             <div class="text-center mb-5">
                 <h2 class="fw-bold">Fonctionnalités Principales</h2>
                 <p class="text-muted">
@@ -166,84 +127,58 @@
                 </p>
             </div>
 
-            <!-- Grille de 4 cartes de fonctionnalités -->
             <div class="row g-4">
 
-                <!-- ========================================
-                     CARTE 1 : ANALYSES SPATIALES
-                     ======================================== -->
+                <!-- Analyses -->
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-card h-100 text-center p-4">
-                        <!-- Icône représentative -->
                         <i class="fas fa-project-diagram fa-2x text-primary mb-3"></i>
-                        
-                        <!-- Titre de la fonctionnalité -->
                         <h5 class="fw-bold">Analyses Spatiales</h5>
-                        
-                        <!-- Liste des sous-fonctionnalités -->
                         <ul class="small text-muted list-unstyled">
                             <li>• Buffer & intersection</li>
                             <li>• Jointures spatiales</li>
-                            <li>• Calcul d'indicateurs</li>
+                            <li>• Calcul d’indicateurs</li>
                             <li>• Requêtes SQL spatiales</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- ========================================
-                     CARTE 2 : TRAITEMENT LIDAR
-                     ======================================== -->
+                <!-- LIDAR -->
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-card h-100 text-center p-4">
-                        <!-- Icône onde (représentant le LIDAR) -->
                         <i class="fas fa-wave-square fa-2x text-success mb-3"></i>
-                        
                         <h5 class="fw-bold">Traitement LIDAR</h5>
-                        
-                        <!-- Fonctionnalités LIDAR -->
                         <ul class="small text-muted list-unstyled">
                             <li>• Chargement LAS / LAZ</li>
                             <li>• Classification</li>
-                            <li>• LOD dynamique</li> <!-- Level of Detail -->
+                            <li>• LOD dynamique</li>
                             <li>• Profil altimétrique</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- ========================================
-                     CARTE 3 : MODÉLISATIONS
-                     ======================================== -->
+                <!-- Modélisation -->
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-card h-100 text-center p-4">
-                        <!-- Icône eau (pour les zones inondables) -->
                         <i class="fas fa-water fa-2x text-info mb-3"></i>
-                        
                         <h5 class="fw-bold">Modélisations</h5>
-                        
-                        <!-- Types de simulations disponibles -->
                         <ul class="small text-muted list-unstyled">
                             <li>• Zones inondables</li>
                             <li>• Analyse de visibilité</li>
                             <li>• Ombrage solaire</li>
-                            <li>• MNT / MNS</li> <!-- Modèle Numérique de Terrain/Surface -->
+                            <li>• MNT / MNS</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- ========================================
-                     CARTE 4 : POSTGIS
-                     ======================================== -->
+                <!-- PostGIS -->
                 <div class="col-md-6 col-lg-3">
                     <div class="feature-card h-100 text-center p-4">
-                        <!-- Icône base de données -->
                         <i class="fas fa-database fa-2x text-warning mb-3"></i>
-                        
                         <h5 class="fw-bold">PostGIS</h5>
-                        
-                        <!-- Caractéristiques de la base de données -->
                         <ul class="small text-muted list-unstyled">
                             <li>• Stockage spatial optimisé</li>
-                            <li>• Indexation GiST</li> <!-- Generalized Search Tree -->
+                            <li>• Indexation GiST</li>
                             <li>• API REST sécurisée</li>
                             <li>• Performances élevées</li>
                         </ul>
@@ -254,14 +189,10 @@
         </div>
     </section>
 
-    <!-- ========================================
-         PIED DE PAGE (FOOTER)
-         Informations sur le développeur et liens sociaux
-         ======================================== -->
+    <!-- FOOTER -->
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
 
-            <!-- Crédit développeur -->
             <p class="mb-2">
                 <i class="fas fa-code me-1"></i>
                 Développé par
@@ -271,21 +202,17 @@
                 </a>
             </p>
 
-            <!-- Liens vers les réseaux sociaux -->
             <div class="mb-2">
-                <!-- Lien GitHub -->
                 <a href="https://anicetyao225.github.io/porfolio/" class="text-white me-3">
                     <i class="fab fa-github fa-lg"></i>
                 </a>
 
-                <!-- Lien LinkedIn -->
                 <a href="https://www.linkedin.com/in/anicet-yao-g%C3%A9omaticien-sig-cdi-cartographe-data-analyst-data-scientist/"
                     class="text-white">
                     <i class="fab fa-linkedin fa-lg"></i>
                 </a>
             </div>
 
-            <!-- Copyright -->
             <p class="text-muted small mb-0">
                 © 2025 WebSIG Portfolio
             </p>
@@ -293,15 +220,10 @@
         </div>
     </footer>
 
-    <!-- ========================================
-         SCRIPTS JAVASCRIPT
-         Chargés en fin de page pour optimiser le temps de chargement
-         ======================================== -->
-    
-    <!-- Bootstrap JS : Nécessaire pour les composants interactifs (navbar, modals, etc.) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Script personnalisé -->
+    <!-- Custom JS -->
     <script src="js/main.js"></script>
 
 </body>
